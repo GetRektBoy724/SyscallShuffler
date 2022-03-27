@@ -1,2 +1,2 @@
-# SyscalllShuffler
-Shuffle NT functions position in NTDLL to make it immune from SysWhispers2 and FreshyCalls
+# SyscallShuffler
+SyscallShuffler is like a vaccine for your NTDLL so it will immune from direct syscall methods like [SysWhispers2](https://github.com/jthuraisamy/SysWhispers2), [FreshyCalls](https://github.com/crummie5/FreshyCalls) and [Halo's Gate](https://blog.sektor7.net/#!res/2021/halosgate.md)/[Tartarus Gate](https://github.com/trickster0/TartarusGate/). What SyscallShuffler do is shuffling the position of NT* functions in memory, so the syscall ID doesnt corresponds with the position of the function in memory, which will make methods that get the syscall ID from sorting the position in memory get the wrong syscall ID. For now, SyscallShuffler can only make a "vaccinated" NTDLL from disk, and cant do it on runtime.
